@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDS ToDoListApp</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="root-container set-mode dayTheme smooth-transition">
+            <h1>TODO LIST</h1>
+
+          <div class="toolbar">
+            <div class="search-container">
+                <input type="text" class=" set-mode dayTheme smooth-transition" id="search" placeholder="Search todos..." oninput="searchTodo()"/>
+                  <ion-icon name="search-outline" id="search-outline"></ion-icon>
+            </div>
+            <button id="theme">
+                <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+            </button>
+           
+          </div>
+
+         
+            <ul class="todos-container set-mode dayTheme smooth-transition">
+            </ul>
+         
+
+
+          <div class="add-todos-container set-mode dayTheme">
+            <h2>Add Todos</h2>
+            <div class="todos-input-container">   
+              <input type="text" class="set-mode dayTheme" placeholder="Type your todos..." id="todos">
+            </div>
+            <button id="save-btn">Save</button>
+          </div>
+          <ion-icon name ="add-outline" id="add-todos-btn"></ion-icon>
+          
+
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+
+    <footer>Copyright © 2024 MIDS Studio</footer>
+</body>
+
+</html>
