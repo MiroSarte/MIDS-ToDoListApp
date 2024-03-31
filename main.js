@@ -10,6 +10,7 @@ const cntAddtodos = document.querySelector(".add-todos-container")
 //change theme when the button is click.
 btnTheme.addEventListener("click", ()=>{
     //use for each to target all element that has setMode class
+    enableTransition()
     Array.from(setMode).forEach((element, i) =>{
         //if the class of element is set in nightTheme then 
         //change to dayTheme otherwise nightTheme.
@@ -194,3 +195,24 @@ function searchTodo(){
     
   }
 }
+
+// Function to disable transition
+function disableTransition() {
+    const elements = document.querySelectorAll('.smooth-transition');
+    elements.forEach(element => {
+        element.style.transition = 'none'; // Remove transition
+    });
+}
+function enableTransition(){
+    const elements = document.querySelectorAll('.smooth-transition');
+    elements.forEach(element => {
+        element.style.transition = 'all ease-in 300ms'; // Remove transition
+    });
+    
+} 
+
+
+// Attach resize event listener
+window.addEventListener('resize', ()=>{
+    disableTransition();
+} );

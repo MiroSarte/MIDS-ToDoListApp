@@ -274,6 +274,7 @@ footer{
   border-style: none;
   font-family: var(--font_style_medium);
   font-size: var(--font-size_medium);
+  background-color: transparent;
   width: 36vw;
   text-indent: .5em;
 }
