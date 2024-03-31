@@ -116,7 +116,7 @@ function displayTodos(){
         list_container.appendChild(listElement)
     });
 }
-
+/*
 //put a mark on checked to-dos.
 const checkbox = document.getElementsByClassName("todos-checkbox")
 Array.from(checkbox).forEach((element)=>{
@@ -131,7 +131,7 @@ Array.from(checkbox).forEach((element)=>{
         
     })
   
-})
+})*/
 
 
 //deleting a todos
@@ -157,7 +157,20 @@ todoListContainer.addEventListener("click", function(event) {
             }
         }
     }
+
+    //put mark in the span when the checkbox is checked
+    else if(event.target.classList.contains("todos-checkbox")){
+        let checkbox = event.target;
+        let span = checkbox.nextElementSibling;
+                 if(checkbox.checked){
+                    span.style.textDecoration = "line-through";
+                 }
+                 else{
+                    span.style.textDecoration = "none";
+                 }
+}
 });
+
 
 
 //filtering searched todos
